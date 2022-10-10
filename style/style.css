@@ -23,18 +23,138 @@ body{
     height: calc(10px + 825 * (100vw / 1920));
     position: relative;
 }
+
+
+
+
+/*name city*/
+.name-container{
+    position: absolute;
+    top: calc(10px + 100 * (100vw / 1920));
+    right: calc(10px + 100 * (100vw / 1920));
+    color: white;
+}
+
+.name-container .name-citi{
+    font-size: calc(3px + 80 * (100vw / 1920));
+
+}
+
+
+/*time title*/
+
+.main .photo-whether .whether-wrap{
+    position: absolute;
+    top: calc(10px + 100 * (100vw / 1920));
+    left: calc(10px + 100 * (100vw / 1920));
+}
+.main .photo-whether .whether-wrap .time-wrap{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: calc(0px + 15 * (100vw / 1920));
+    margin-top: calc(0px + 40 * (100vw / 1920));
+
+}
+.main .photo-whether .whether-wrap .time-wrap .time-whether{
+    width: calc(3px + 52 * (100vw / 1920));
+    height: calc(3px + 22 * (100vw / 1920));
+    background-color: rgba(44, 51, 108, 0.6);
+    border-radius: 50px;
+    margin-right: calc(0px + 15 * (100vw / 1920));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .photo-whether .whether-wrap .time-and-date{
+    font-size: calc(0px + 30 * (100vw / 1920));
+    color: white;
+
+}
+
+.main .photo-whether .whether-wrap .time-and-date .time{
+    font-size: calc(3px + 80 * (100vw / 1920));
+}
+
+
+
+
+
+
+
+/*nav*/
+
+
 .main .photo-whether .nav{
     position: absolute;
+    display: flex;
+    justify-content: end;
     z-index: 5;
     bottom: 0;
     background-color: rgba(44, 51, 108, 0.8);
     width: 100%;
     height: 30%;
 }
-.main .photo-whether .time-and-date .time{
-    font-size: calc(10px + 60 * (100vw / 1920));
-    color: white;
-    position: absolute;
-    top: calc(10px + 100 * (100vw / 1920));
-    left: calc(10px + 100 * (100vw / 1920));
+#active-container{
+    width: calc(10px + 400 * (100vw / 1920));
+    position: relative;
+    justify-content: center;
+    align-items: end;
+    padding: 0 calc(3px + 47 * (100vw / 1920)) 0 calc(3px + 47 * (100vw / 1920));
 }
+#active-forecast{
+    position: absolute;
+    left: calc(3px + 47 * (100vw / 1920));
+    width: calc(-4px + 194 * (100vw / 1920));
+    height: calc(-4px + 194 * (100vw / 1920));
+}
+#active-day{
+    width: calc(4px + 82 * (100vw / 1920));
+    height: calc(4px + 28 * (100vw / 1920));
+    font-size: calc(2px + 40 * (100vw / 1920));
+}
+#active-temp{
+    font-size: calc(2px + 70 * (100vw / 1920));
+}
+.main .photo-whether .nav .forecast-weather-container{
+    width: calc(5px + 220 * (100vw / 1920));
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: .3s;
+}
+
+.main .photo-whether .nav .forecast-weather-container:hover {
+    background-color: rgba(44, 51, 108, 0.46);
+    box-shadow: 0 0 5px rgba(0, 25, 255, 0.6);
+}
+.nav .forecast-weather-container .day{
+    width: calc(3px + 52 * (100vw / 1920));
+    height: calc(3px + 22 * (100vw / 1920));
+    background-color: rgba(44, 51, 108, 0.6);
+    border-radius: 50px;
+    color: white;
+    transition: .4s;
+    font-size: calc(0px + 15 * (100vw / 1920));
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav .forecast-weather-container .forecast{
+    width: calc(-2px + 94 * (100vw / 1920));
+    height: calc(-2px + 94 * (100vw / 1920));
+    transition: .4s;
+}
+
+.nav .forecast-weather-container .temp{
+    font-size:  calc(3px + 32 * (100vw / 1920));
+    transition: .4s;
+    color: white;
+}
+
