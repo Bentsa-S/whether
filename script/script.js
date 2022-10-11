@@ -1,10 +1,14 @@
 let cityName = String
 let APIkey = '343d33d71141f1623d91c8c8aab91982'
-searchCity('запоріжжя')
+searchCity('київ')
+let  output = document.querySelector('#output')
 
 
-
-
+output.addEventListener('keypress', (e) =>{
+    if (e.key === 'Enter') {
+        searchCity(`${output.value}`)
+    }
+})
 
 
 
@@ -17,41 +21,12 @@ function searchCity(city) {
         .then((f) =>(f.json()))
         .then(date => {
             let lat = date[0].lat,
-                lon = date[0].lon
+                lon = date[0].lon;
             document.querySelector('.name-citi').textContent = `${date[0].name}`
             forecastHour(lat, lon, 0)
             pushWeatherDay(lat, lon)
         })
 }
-
-
-
-function forecastHour(lat, lon, n){
-    let urlForecastHours = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIkey}`
-    // &units=metric
-
-    fetch(urlForecastHours)
-        .then(forecast => forecast.json())
-        .then(date => {
-            console.log(date)
-            let whetherTime = document.querySelectorAll('.time-whether'),
-                whetherText = document.querySelectorAll('.text-whether'),
-                windSpeed = document.querySelector('.wind-speed'),
-                today = new Date(date.list[0].dt)
-            console.log(today)
-            whetherTime[0].textContent = `${today.getHours()}:00`
-            whetherTime[1].textContent = `${(today.getHours() + 6)}:00`
-            whetherTime[2].textContent = `${(today.getHours() + 12)}:00`
-            whetherText[0].textContent = `-- ${date.list[0 + n].weather[0].description},  temp ${date.list[0 + n].main.temp}`
-            whetherText[1].textContent = `-- ${date.list[2 + n].weather[0].description},  temp ${date.list[2 + n].main.temp}`
-            whetherText[2].textContent = `-- ${date.list[4 + n].weather[0].description},  temp ${date.list[4 + n].main.temp}`
-
-
-        })
-
-}
-
-
 
 class whetherDay{
     constructor(day, img, temp) {
@@ -122,7 +97,7 @@ function pushWeatherDay(lat, lon){
         .then((r) => r.json())
         .then((date) => {
             for (let i = 0; i < 5; i++){
-                let localClass = new whetherDay(daysNextWeak[i], `${date.daily[i].weather[0].main}.png`, date.daily[i].temp.day)
+                let localClass = new whetherDay(daysNextWeak[i], `${date.daily[i].weather[0].main}.png`, date.daily[i].temp.day + ' C°')
                 localClass.push
 
                 let containerWeatherDay = document.querySelectorAll('.forecast-weather-container')

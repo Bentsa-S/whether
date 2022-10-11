@@ -26,6 +26,49 @@ body{
 
 
 
+/*search*/
+.main .photo-whether .header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: calc(2px + 20 * (100vw / 1920));
+}
+.flex{
+    width: 40%;
+    display: flex;
+    position: relative;
+}
+
+.main .photo-whether .header .style-button{
+    background-color: rgba(44, 51, 108, 0.6);
+    width: 40%;
+    font-size: calc(1px + 15 * (100vw / 1920));
+    height: calc(1px + 25 * (100vw / 1920));
+    letter-spacing: calc(1px + 3 * (100vw / 1920));
+    border-radius: 300px;
+    color: white;
+    border: none;
+
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.main .photo-whether .header #output{
+    padding-left: 2%;
+    box-sizing: border-box;
+    width: 100%;
+}
+.main .photo-whether .header img{
+    width: calc(1px + 20 * (100vw / 1920));
+    height: calc(1px + 20 * (100vw / 1920));
+    position: absolute;
+    right: 2%;
+    top: 11%;
+}
+
+
+
 
 /*name city*/
 .name-container{
@@ -36,10 +79,13 @@ body{
 }
 
 .name-container .name-citi{
-    font-size: calc(3px + 80 * (100vw / 1920));
+    font-size: calc(1px + 80 * (100vw / 1920));
+    margin-bottom: calc(1px + 10 * (100vw / 1920));
+}
+.name-container .wind-speed, .visibility{
+    font-size: calc(0px + 20 * (100vw / 1920));
 
 }
-
 
 /*time title*/
 
@@ -66,6 +112,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.main .photo-whether .whether-wrap .time-wrap .active-hours{
+    border: 1px solid white;
+    box-sizing: border-box;
 }
 .main .photo-whether .whether-wrap .time-and-date{
     font-size: calc(0px + 30 * (100vw / 1920));
@@ -115,7 +165,7 @@ body{
     font-size: calc(2px + 40 * (100vw / 1920));
 }
 #active-temp{
-    font-size: calc(2px + 70 * (100vw / 1920));
+    font-size: calc(2px + 50 * (100vw / 1920));
 }
 .main .photo-whether .nav .forecast-weather-container{
     width: calc(5px + 220 * (100vw / 1920));
