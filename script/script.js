@@ -1,16 +1,9 @@
 let cityName = String
 let APIkey = '343d33d71141f1623d91c8c8aab91982'
-searchCity('київ')
-let  output = document.querySelector('#output')
 
-
-output.addEventListener('keypress', (e) =>{
-    if (e.key === 'Enter') {
-        searchCity(`${output.value}`)
-    }
-})
-
-
+searchCity('запоріжжя')
+//
+// pushWeatherDay(47.8508, 35.1183)
 
 
 function searchCity(city) {
@@ -96,8 +89,9 @@ function pushWeatherDay(lat, lon){
     fetch(url)
         .then((r) => r.json())
         .then((date) => {
+            console.log(date)
             for (let i = 0; i < 5; i++){
-                let localClass = new whetherDay(daysNextWeak[i], `${date.daily[i].weather[0].main}.png`, date.daily[i].temp.day + ' C°')
+                let localClass = new whetherDay(daysNextWeak[i], `${date.daily[i].weather[0].main}.png`, `${date.daily[i].temp.day}` + ' C°')
                 localClass.push
 
                 let containerWeatherDay = document.querySelectorAll('.forecast-weather-container')

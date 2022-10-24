@@ -7,6 +7,10 @@ body{
 
     width: 100%;
     height: 100vh;
+
+    background-image: url("../img/backgrount.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -41,30 +45,30 @@ body{
 
 .main .photo-whether .header .style-button{
     background-color: rgba(44, 51, 108, 0.6);
-    width: 40%;
-    font-size: calc(1px + 15 * (100vw / 1920));
-    height: calc(1px + 25 * (100vw / 1920));
+    font-size: calc(1px + 25 * (100vw / 1920));
+    height: calc(1px + 55 * (100vw / 1920));
     letter-spacing: calc(1px + 3 * (100vw / 1920));
     border-radius: 300px;
     color: white;
     border: none;
+
+    padding-left: 5%;
+    box-sizing: border-box;
+    width: 100%;
 
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
 }
-.main .photo-whether .header #output{
-    padding-left: 2%;
-    box-sizing: border-box;
-    width: 100%;
-}
+
 .main .photo-whether .header img{
     width: calc(1px + 20 * (100vw / 1920));
     height: calc(1px + 20 * (100vw / 1920));
     position: absolute;
-    right: 2%;
-    top: 11%;
+    cursor: pointer;
+    right: 5%;
+    top: 32%;
 }
 
 
@@ -76,6 +80,10 @@ body{
     top: calc(10px + 100 * (100vw / 1920));
     right: calc(10px + 100 * (100vw / 1920));
     color: white;
+    background-color: rgba(44, 51, 108, 0.6);
+    padding:  calc(0px + 25 * (100vw / 1920));
+    border-radius:  calc(0px + 15 * (100vw / 1920));
+
 }
 
 .name-container .name-citi{
@@ -93,6 +101,9 @@ body{
     position: absolute;
     top: calc(10px + 100 * (100vw / 1920));
     left: calc(10px + 100 * (100vw / 1920));
+    background-color: rgba(44, 51, 108, 0.6);
+    padding:  calc(0px + 25 * (100vw / 1920));
+    border-radius:  calc(0px + 15 * (100vw / 1920));
 }
 .main .photo-whether .whether-wrap .time-wrap{
     display: flex;
@@ -108,10 +119,23 @@ body{
     background-color: rgba(44, 51, 108, 0.6);
     border-radius: 50px;
     margin-right: calc(0px + 15 * (100vw / 1920));
+    cursor: pointer;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.main .photo-whether .whether-wrap .time-wrap .time-whether:hover{
+    background-color: rgba(44, 51, 108, 0.46);
+    box-shadow: 0 0 5px rgba(0, 25, 255, 0.6);
+
+}
+
+.main .photo-whether .whether-wrap .time-wrap .text-whether{
+    padding: calc(1px + 6 * (100vw / 1920));
+    border-radius: 50px;
+
+
 }
 .main .photo-whether .whether-wrap .time-wrap .active-hours{
     border: 1px solid white;
@@ -125,6 +149,7 @@ body{
 
 .main .photo-whether .whether-wrap .time-and-date .time{
     font-size: calc(3px + 80 * (100vw / 1920));
+
 }
 
 
@@ -170,6 +195,7 @@ body{
 .main .photo-whether .nav .forecast-weather-container{
     width: calc(5px + 220 * (100vw / 1920));
     height: 100%;
+    cursor: pointer;
 
     display: flex;
     flex-direction: column;
