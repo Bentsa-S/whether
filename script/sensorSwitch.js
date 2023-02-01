@@ -5,8 +5,6 @@ function forecastHour(lat, lon, n){
     fetch(urlForecastHours)
         .then(forecast => forecast.json())
         .then(date => {
-            console.log(date)
-
             clickHours(0, date.list[0 + n].wind.speed, date.list[0 + n].visibility, date.list[0 + n].weather[0].description, date.list[0 + n].main.temp, date.list[0 + n].dt_txt)
             clickHours(1, date.list[2 + n].wind.speed, date.list[2 + n].visibility, date.list[2 + n].weather[0].description, date.list[2 + n].main.temp, date.list[2 + n].dt_txt)
             clickHours(2, date.list[4 + n].wind.speed, date.list[4 + n].visibility, date.list[4 + n].weather[0].description, date.list[4 + n].main.temp, date.list[4 + n].dt_txt)

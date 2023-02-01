@@ -38,14 +38,16 @@ body{
     margin-top: calc(2px + 20 * (100vw / 1920));
 }
 .flex{
-    width: 40%;
+    width: 80%;
     display: flex;
+    justify-content: space-between;
     position: relative;
 }
 
 .main .photo-whether .header .style-button{
     background-color: rgba(44, 51, 108, 0.6);
     font-size: calc(1px + 25 * (100vw / 1920));
+    width: 40%;
     height: calc(1px + 55 * (100vw / 1920));
     letter-spacing: calc(1px + 3 * (100vw / 1920));
     border-radius: 300px;
@@ -54,7 +56,6 @@ body{
 
     padding-left: 5%;
     box-sizing: border-box;
-    width: 100%;
 
     display: flex;
     position: relative;
@@ -62,12 +63,22 @@ body{
     align-items: center;
 }
 
+.main .photo-whether .header .geolocation{
+    padding: 0;
+    cursor: pointer;
+}
+
+.main .photo-whether .header .geolocation:hover{
+    background-color: rgba(44, 51, 108, 0.46);
+    box-shadow: 0 0 5px rgba(0, 25, 255, 0.6);
+}
+
 .main .photo-whether .header img{
     width: calc(1px + 20 * (100vw / 1920));
     height: calc(1px + 20 * (100vw / 1920));
     position: absolute;
     cursor: pointer;
-    right: 5%;
+    right: 64%;
     top: 32%;
 }
 

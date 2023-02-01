@@ -21,6 +21,24 @@ function searchCity(city) {
         })
 }
 
+
+function searchCitiToGeolocation(props){
+    let lon = props.coords.longitude
+    let lat = props.coords.latitude
+    console.log(props)
+    forecastRemove()
+
+    let urlForecastHours = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIkey}&units=metric`
+
+    fetch(urlForecastHours)
+        .then(forecast => forecast.json())
+        .then(date => {
+            document.querySelector('.name-citi').textContent = `${date.city.name}`
+        })
+    forecastHour(lat, lat, 0)
+    pushWeatherDay(lat, lat,)
+}
+
 class whetherDay{
     constructor(day, img, temp) {
         this.container = document.createElement('div')
