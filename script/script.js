@@ -25,7 +25,6 @@ function searchCity(city) {
 function searchCitiToGeolocation(props){
     let lon = props.coords.longitude
     let lat = props.coords.latitude
-    console.log(props)
     forecastRemove()
 
     let urlForecastHours = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIkey}&units=metric`
@@ -107,7 +106,6 @@ function pushWeatherDay(lat, lon){
     fetch(url)
         .then((r) => r.json())
         .then((date) => {
-            console.log(date)
             for (let i = 0; i < 5; i++){
                 let localClass = new whetherDay(daysNextWeak[i], `${date.daily[i].weather[0].main}.png`, `${date.daily[i].temp.day}` + ' C°')
                 localClass.push

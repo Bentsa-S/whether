@@ -26,7 +26,6 @@ function clickHours(i, windSpeedText, visibilityText, weatherDescriptionText, te
         visibility = document.querySelector('.visibility'),
         whetherText = document.querySelectorAll('.text-whether'),
         today = new Date(time)
-    console.log(today)
     weatherTime[i].textContent = `${today.getHours()}:00`
     whetherText[i].textContent = `-- ${weatherDescriptionText},  temp ${tempText} C°`
 
